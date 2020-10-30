@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "chefs-and-dishwashers": {
+      "hosting": {
+        "chefs-and-dishwashers-website": [
+          "chefs-and-dishwashers"
+        ]
+      }
+    }
+  }
+}
