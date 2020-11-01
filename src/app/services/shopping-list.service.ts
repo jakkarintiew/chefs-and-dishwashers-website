@@ -35,4 +35,8 @@ export class ShoppingListService {
   deleteShoppingListItem(key: string) {
     this.itemsRef.remove(key);
   }
+
+  addShoppingListItem(item) {
+    this.itemsRef.update(item.key, item);
+  }
 }
