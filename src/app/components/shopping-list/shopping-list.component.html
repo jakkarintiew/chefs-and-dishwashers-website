@@ -1,6 +1,19 @@
-<app-add-item></app-add-item>
-<app-shopping-list-item
-  *ngFor="let shoppingListItem of shoppingList "
-  [shoppingListItem]="shoppingListItem"
->
-</app-shopping-list-item>
+<mat-card class="shopping-list">
+  <mat-card-header>
+    <mat-card-title>Shopping List</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <app-add-item></app-add-item>
+    <app-shopping-list-item
+      *ngFor="let shoppingListItem of shoppingList"
+      [shoppingListItem]="shoppingListItem"
+    >
+    </app-shopping-list-item>
+  </mat-card-content>
+  <mat-card-actions>
+    <button class="clear-botton" (click)="clearList()" mat-button>
+      <mat-icon>delete</mat-icon>
+      Clear Shopping List
+    </button>
+  </mat-card-actions>
+</mat-card>

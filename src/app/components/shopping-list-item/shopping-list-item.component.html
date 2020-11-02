@@ -1,8 +1,19 @@
 <div [ngClass]="setClasses()">
-  <p>
-    <input (change)="onToggle(shoppingListItem)" type="checkbox" [checked]="shoppingListItem.bought"
-    />
+  <mat-checkbox
+    class="checkbox"
+    (change)="onToggle(shoppingListItem)"
+    [checked]="shoppingListItem.bought"
+  >
     {{ shoppingListItem.item_name }}
-    <button (click)="onDelete(shoppingListItem)" class="del">x</button>
-  </p>
+  </mat-checkbox>
+  <!-- <button (click)="onDelete(shoppingListItem)" class="del">x</button> -->
+  <button
+    class="del-button"
+    (click)="onDelete(shoppingListItem)"
+    mat-button
+    mat-icon-button
+    matSuffix
+  >
+    <mat-icon class="material-icons">close</mat-icon>
+  </button>
 </div>

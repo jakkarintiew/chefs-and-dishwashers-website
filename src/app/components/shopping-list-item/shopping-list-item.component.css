@@ -1,11 +1,15 @@
-.del {
-  background: #ff0000;
-  color: #fff;
-  border: none;
-  padding: 5px 9px;
-  border-radius: 50%;
+.del-button {
+  display: flex;
   cursor: pointer;
   float: right;
+  width: 24px !important;
+  height: 24px !important;
+  line-height: 24px !important;
+  margin-right: 10px;
+}
+
+.mat-icon {
+  transform: scale(0.6);
 }
 
 .item {

@@ -36,7 +36,13 @@ export class ShoppingListService {
     this.itemsRef.remove(key);
   }
 
-  addShoppingListItem(item) {
+  addShoppingListItem(item: ShoppingListItem) {
     this.itemsRef.update(item.key, item);
+  }
+
+  clearShoppingList(items: ShoppingListItem[]) {
+    items.forEach((item) => {
+      this.itemsRef.remove(item.key);
+    });
   }
 }

@@ -17,7 +17,13 @@ export class ShoppingListComponent implements OnInit {
   ngOnInit(): void {
     // Load shopping list from Firebase
     this.shoppingListService.getShoppingList().subscribe((shoppingList) => {
-      this.shoppingList = shoppingList;
+      this.shoppingList = shoppingList.sort(function (x, y) {
+        return x.bought === y.bought ? 0 : x.bought ? 1 : -1;
+      });
     });
+  }
+
+  clearList(): void {
+    this.shoppingListService.clearShoppingList(this.shoppingList);
   }
 }
