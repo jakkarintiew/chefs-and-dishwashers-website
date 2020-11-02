@@ -13,11 +13,16 @@
 }
 
 .item {
-  background: #f4f4f4;
+  background: #ffffff;
   padding: 10px;
-  border-bottom: 1px #ccc dotted;
+}
+
+.item:hover {
+  background: #f4f4f4;
+  font-weight: bold;
 }
 
 .is-bought {
   text-decoration: line-through;
+  color: #cccccc;
 }
