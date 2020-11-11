@@ -19,9 +19,10 @@ export class AddItemComponent implements OnInit {
     const item = {
       item_name: this.item_name,
       bought: false,
-      key: this.item_name.replace(' ', '_').toLowerCase(),
+      key: this.item_name.toLowerCase().split(' ').join('_'),
     };
 
     this.shoppingListService.addShoppingListItem(item);
+    this.item_name = '';
   }
 }
